@@ -146,6 +146,18 @@ If you're using AngularJS 1.1.3 and newer, it's sufficient to configure the
     $httpProvider.defaults.xsrfCookieName = 'csrftoken';
     $httpProvider.defaults.xsrfHeaderName = 'X-CSRFToken';
 
+Input token in Jinja2 templates
+-------------------------------
+
+For Jinja2 you can use  ``{{ csrf_input }}`` which is the same as ``{% csrf_token %}`` in the Django templates.
+
+For example:
+
+.. code-block:: html
+
+       <form action="" method="post">{{ csrf_input }}
+
+
 Other template engines
 ----------------------
 
